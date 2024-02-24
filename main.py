@@ -2,7 +2,7 @@ import asyncio
 import logging
 import sys
 import os
-from dotenv import load_dotenv
+
 
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
@@ -11,8 +11,7 @@ from aiogram.types import Message
 
 from routers import secretary
 
-load_dotenv()
-TOKEN = os.getenv("TELEGRAM_TOKEN")
+TOKEN = os.environ['TELEGRAM_TOKEN']
 
 dp = Dispatcher()
 dp.include_router(secretary)
