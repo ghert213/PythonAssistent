@@ -1,11 +1,9 @@
-from aiogram import Router, F, html,  types
-from aiogram.types import Message, ContentType, Voice
-from aiogram.filters import Filter
+from aiogram import Router
 from aiogram.types import Message
-
+from filters import AudioFilter
 
 secretary = Router()
 
-@secretary.message()
+@secretary.message(AudioFilter())
 async def add_task(message: Message) -> None:
-    pass
+    await message.answer(f"Я принял аудио-сообщение")
