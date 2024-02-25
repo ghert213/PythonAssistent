@@ -1,4 +1,6 @@
 .env
+.token-oauth
+config.py
 /__pycache__
 *.ogg
 *.wav

@@ -3,7 +3,6 @@ import logging
 import sys
 import os
 
-
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
